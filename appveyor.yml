@@ -4,7 +4,9 @@ init:
 
 # Build script
 build_script:
-  - ps: .\build.ps1 -Target "AppVeyor"
+  - ps: .\build.ps1 -Target "Create-NuGet-Packages"
+  - ps: .\src\Cake\bin\Release\Cake.exe -Version
+  - ps: .\src\Cake\bin\Release\Cake.exe testappveyor.cake -Verbosity=Diagnostic
 
 # Tests
 test: off
