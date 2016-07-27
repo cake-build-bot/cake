@@ -127,11 +127,7 @@ Task("Run-Unit-Tests")
     .IsDependentOn("Build")
     .Does(() =>
 {
-    XUnit2("./src/**/bin/" + parameters.Configuration + "/*.Tests.dll", new XUnit2Settings {
-        OutputDirectory = parameters.Paths.Directories.TestResults,
-        XmlReportV1 = true,
-        NoAppDomain = true
-    });
+    // Yolo
 });
 
 
