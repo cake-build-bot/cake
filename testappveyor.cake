@@ -23,5 +23,5 @@ if (BuildSystem.IsRunningOnAppVeyor)
         odd = !odd;
     }
 
-    //BuildSystem.AppVeyor.UploadTestResults("./TestResults.xml", AppVeyorTestResultsType.XUnit);
+    BuildSystem.AppVeyor.UploadTestResults("./TestResults.xml", AppVeyorTestResultsType.XUnit);
 }
