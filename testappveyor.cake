@@ -19,3 +19,5 @@ foreach(var nuget in nugetPackages)
         .SetDeploymentName(odd ? "Odd" : "Even"));
     odd = !odd;
 }
+
+BuildSystem.AppVeyor.UploadTestResults("./TestResults.xml", AppVeyorTestResultsType.XUnit);
